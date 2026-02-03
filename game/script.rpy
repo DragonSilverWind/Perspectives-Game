@@ -1,32 +1,19 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-define Mother = Character("Pężyra")
+﻿define Mother = Character("Pężyra")
 define Husband = Character("Rządziwoj")
 define Son = Character("Mieczysław")
 define Daughter = Character("Jagódka")
 
 define Advicers = Character("Advicers")
 define Servant1 = Character("Young servant")
+define Guardian = Character("Guardian")
+define Messenger = Character("Messenger")
 
-# The game starts here.
+####### PROLOGUE #######
 
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
     scene bg castle
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-    #show eileen happy
-    #
     "Prologue"
     
     "This part will entroduce the player the characters, their relationships and lore."
@@ -34,16 +21,11 @@ label start:
 
     jump czy_narada
 
-
-    # These display lines of dialogue.
-
-    # This ends the game.
-
     return
 
 label czy_narada:
 
-    scene bg castle_corridor
+    scene bg castle corridor
 
     show Mother at left 
     show Advicers at right 
@@ -94,7 +76,7 @@ label narada:
     show Advicers at right
     show Husband
     show Mother at left
-    show bg deliberation_room
+    show bg deliberation room
 
     "Pężyra and Rądziwoj enter deliberation room. The advicers already wait. They look at Pężyra."
 
@@ -108,9 +90,11 @@ label narada:
     "The news shows that other clans/kingdomes continue to create an alliance against Husband and gather forces."
     "Rądziwoj and his advicors discuss about the threat and ways to replay on it."
     "There will be some dialogue options for Pężyra to join the discussions, but all her attempts will be ignored or criticalized as *women know nothing about politics*."
+    hide Husband
+    hide Advicers
 
 label trening:
-    show bg training_field
+    show bg training field
 
     show Son
     show Servant1 at right
@@ -130,9 +114,8 @@ label trening:
                     Son "You fought well."
                     Mother "And you will become a glorious warrior, a protector of feature king."
                     Servant1 "Thank you, my lady. I'll do my best!"
-        
         "Let him do that":
-            ""
+            "Pężyra just watches how her son bastes a servant."
     hide Son
     hide Servant1
     show Daughter at right
@@ -147,10 +130,10 @@ label trening:
             Daughter "But mommy..."
             Mother "I will tell you one tomorrow, all right? If you will nicely go to bed now."
             Daughter "Okey...."
-            jump end
+            jump napad
 
 label dobranocka:
-    show bg daughters_room
+    show bg daughters room
 
     Mother "Which story would you like to listen today?"
     Daughter "I don't know..."
@@ -159,10 +142,168 @@ label dobranocka:
             Daughter "This one about *something important for lore*?"
             Mother "Yes, this one..."
         "I will tell you a story, which have you never heard about.":
-            ""
+            "Something imoprtant about the lore"
+    hide Daughter
+    jump napad
 
+####### Akt I #######
+
+label napad:
+    scene bg mothers room night
+    "Act I"
+    
+    "Pężyra is waken up by some screams."
+    "She can hear more of them."
+    "And the sound of striking swords."
+    "And she can smell smoke."
+    "Her room's door opens rapidly."
+    show Guardian at right
+    "Pężyra sees one of her husbands soildiers."
+
+    Guardian "My lady! We're under attack! You need to go a safty place!"
+
+    show Mother at left
+    jump informacje
+
+label informacje:
+    menu:
+        "Let's go.":
+            jump wybor
+        "Wait! What about my children?":
+            Guardian "I don't know. The lord has sent others for them."
+            jump informacje
+        "Who attacks us?":
+            Guardian "The alliance against your husband, my lady. All of them."
+            jump informacje
+        "How can I trust you? You may be one of the invaders.":
+            Guardian "The lord has told me that you may not trust me. He told me this message."
+            jump informacje        
+        "Where is my husband?":
+            Guardian "He leads the defence on the walls."
+            jump informacje
+
+label wybor:
+    Guardian "There is a secret passage, which leads out of the castle. The lord told me how to find it."
+    menu:
+        "After you.":
+            "Pężyra safely escapes from the castle, but her familly dies in the attack. Smoke over the burned castle was seen through many days."
+            jump ucieczka
+        "I can not leave my husband in the darkest hour!":
+            Guardian "But my lady! This is not safe! And he will be distructed if he'll have to protect you as well!"
+            Mother "He knows I can care for myself. My presense on the walls will motivate our soldiers."
+            Guardian "As you wish."
+            jump klan
+        "I will not leave without my children!":
+            Guardian "But my lady! This is not safe!"
+            Mother "As they are not safe! They need my support!"
+            Guardian "As you wish, my lady. But their rooms are in different part of the palace."
+            menu:
+                "We will go for my son. We have to protect our heir.":
+                    Guardian "Yes, my lady."
+                    jump syn
+                "We will go for my daughter. She must be very scared.":
+                    Guardian "Yes, my lady."
+                    jump corka
     jump end
 
+label klan:
+    scene bg catle wall
+    "The castle is engulfed in chaos. The invaders ripped through the walls. They are everywhere."
+    show Mother at left
+    "Pężyra founds her husband giving orders for his soildiers."
+    hide Guardian
+    show Husband 
+    Husband "Pężyrko! What are you doing here!? You should get to a shelter!"
+    Mother "I will not hide when our clan is under an attack! And I will not leave till I will be sure our children are safe."
+    Husband "I have already sent warriors for them. Messengers should be back in any moment."
+    show Messenger at right
+    Messenger "My lord!"
+    Husband "Speak!"
+    Messenger "We... we failed you, my lord..."
+    "Pężyra sees smoke comming from rooms' windows of their children."
+    Mother "No... I can't be..."
+    Husband "You traitor! *he raises his sword*"
+    Messenger "My lord! Mercy! Only I've survived a battle!"
+    Husband "So you should have fallen with them!"
+    menu:
+        "Rządziwoj! Stop!":
+            Husband "He has failed us! He has not protected our children!"
+            Mother "But he can still save our clan!"
+            "Rządziwój lower his sword, uncertain."
+            Mother "We need every soildier. I am sure that he will not fail us again."
+            Messenger "I won't! I swear on Perun!"
+            "Rządziwój takes away his sword."
+            Husband "I will follow my wife's wisdom. You will protect her with your life."
+            Messenger "I will, my lord!"
+        "He deserves death.":
+            "Rządziwój cuts off messengers head."
+            Husband "One traitor less."
+    hide Messenger
+    Husband "We lost our children. But there will be the time for grief after the battle. We can not lost our clan."
+    Mother "I will fight on your site, my husband. We will avange our lost."
+    "A lonely arrow rips Rządziwoj's flank."
+    Mother "Rządziwój!"
+    Husband "*cough* Pężyrko... listen to me... I won't survive it..."
+    Mother "No, you can't! I can't lost you too!"
+    Husband "Promise me... *cough* Promise me that you will take care about our clan."
+    Mother "I will. You will be proud of me when we will meet again."
+    Husband "I will be. *cough* I know it. I love you, Pężyrko."
+    Mother "I love you too."
+    hide Husband
+    "Rzędzisław dies in Pężyra's arms."
+    show Guardian at right
+    Guardian "My lady? What are our orders?"
+    menu:
+        "We will fight till the last drop of blood!":
+            "Pężyra takes the sword of her husband."
+            Mother "We will not leave the one we lost unavanged!"
+            "Pężyra led her clan's warriors to the battle."
+            "The blade of her husbnad sword turned red."
+            "Soldiers of the allience, who survived the battle, talked about her fury."
+            "Some of them have seen how she killed all allience leaders."
+            "They have seen, when she fell."
+            "But they never felt safe again."
+            "They known that the ghost of the mother without children, the wife without children, will hunt them till the end of their days."
+            "The alliance's clans are scared of her name till this day."
+            "In her clan, mothers still give her name to their daughters."
+            "They believe that it will bring strength and courage to their hearts."
+            "Because they know that Pężyra will overwatch their clan till the end of the time"
+            jump end
+        "The castle is lost. We have to retreat. We need to gather our forces.":
+            Guardian "But were will we go?"
+            Mother "We will hide in the caves. We know them better than our enemies. We will not find us there."
+            Guardian "Yes, my lady."
+            "Pężyra led the retreat."
+            jump rebelia
+
+label syn:
+    scene bg castle corridor
+    jump end
+
+label corka:
+    scene bg castle corridor
+    jump end
+
+label ucieczka:
+    show bg village
+    hide Guardian
+    hide Mother
+    "After her escape, Pężyra found a shelter in one of her clans village."
+    "Every night she was haunted by ghosts of her children."
+    "Sometimes Pężyra thought she can hear their screams or see their shadows even during the day."
+    "People, who survieved attack on the castle came to Pężyra and asked her for leadership against the alliance."
+    "She refused."
+    "She left."
+    "Some legends says that the last queen of the clan walked as long as she found the end of the world."
+    "Other says that she was caught and executed by the alliance."
+    "One claims that she just hung herself on a tree."
+    "All of them agree, that she was never seen on her clan's land again."
+    jump end
+
+label rebelia:
+    scene bg cave
+    "Act II"
+    jump end
 
 label end:
     "THE END"

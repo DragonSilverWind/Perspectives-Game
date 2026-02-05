@@ -8,13 +8,13 @@ define Servant1 = Character("Young servant")
 define Guardian = Character("Guardian")
 define Messenger = Character("Messenger")
 
-####### PROLOGUE #######
+####### ACCT I #######
 
 label start:
 
     scene bg castle
 
-    "Prologue"
+    "Act I"
     
     "This part will entroduce the player the characters, their relationships and lore."
     "It will show signs of comming catastrophe, but there are no way to prevent it, just to preper for it."
@@ -139,18 +139,31 @@ label dobranocka:
     Daughter "I don't know..."
     menu:
         "I will tell you your favourite story":
-            Daughter "This one about *something important for lore*?"
-            Mother "Yes, this one..."
+            "Pężyra tells Jagódka her favourite story. It gives player some important informations about a lore (but different than in other option)."
         "I will tell you a story, which have you never heard about.":
-            "Something imoprtant about the lore"
+            "Pężyra tells Jagódka her favourite story. It gives player some important informations about a lore (but different than in other option)."
+    Mother "Good night, Jagódko."
+    Daughter "Mommy, wait! Can you leave me a candle?"
+    Mother "You are seven years old, Jagórdka. Are not you a little to old to be afraid of darkness?"
+    Daughter "I'm not afraid!"
+    menu:
+        "Okey, I will leave you a candle.":
+            Daughter "Thank you, mommy! I love you!"
+            Mother "I love you too, Jagódka. Good night."
+            Daughter "Good night, mommy!"
+        "So that means that you are brave enough to sleep without a candle.":
+            "Pężyra snuffs the candle."
+            Mother "Good night, Jagódka. You are very brave."
+            Daughter "Good night."
+
     hide Daughter
     jump napad
 
-####### Akt I #######
+####### Akt II #######
 
 label napad:
     scene bg mothers room night
-    "Act I"
+    "Act II"
     
     "Pężyra is waken up by some screams."
     "She can hear more of them."
@@ -218,13 +231,14 @@ label klan:
     Husband "I have already sent warriors for them. Messengers should be back in any moment."
     show Messenger at right
     Messenger "My lord!"
-    Husband "Speak!"
+    Husband "Speak! Where is my son!?"
     Messenger "We... we failed you, my lord..."
-    "Pężyra sees smoke comming from rooms' windows of their children."
+    "Pężyra hears Jagódka's scream from her room's window."
+    "If the player has choosen to snuff Jagódka's candle, her scream end quickly. Otherwise, Pężyra sees a fire in Jagódka's room. Her daugher screams stops after a longer time."
     Mother "No... I can't be..."
     Husband "You traitor! *he raises his sword*"
     Messenger "My lord! Mercy! Only I've survived a battle!"
-    Husband "So you should have fallen with them!"
+    Husband "So you should have fallen with your prince!"
     menu:
         "Rządziwoj! Stop!":
             Husband "He has failed us! He has not protected our children!"
@@ -302,7 +316,7 @@ label ucieczka:
 
 label rebelia:
     scene bg cave
-    "Act II"
+    "Act III"
     jump end
 
 label end:

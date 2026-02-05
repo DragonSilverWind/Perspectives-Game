@@ -287,7 +287,7 @@ label klan:
             Guardian "But were will we go?"
             Mother "We will hide in the caves. We know them better than our enemies. We will not find us there."
             Guardian "Yes, my lady."
-            "Pężyra led the retreat."
+            "Pężyra led the retreat. She manages to save some soldiers and servants, but the castle burns to the ground."
             jump rebelia
 
 label syn:
@@ -314,9 +314,21 @@ label ucieczka:
     "All of them agree, that she was never seen on her clan's land again."
     jump end
 
+####### Akt III #######
+
 label rebelia:
     scene bg cave
     "Act III"
+    
+    "On this path, Pężyra joins a rebelion against the alliance."
+    "Because she is a women, many soldiers and nobels and soldiers don't want to follow her orders."
+    "Players choices determinates, if she becomes a leader of the rebelion or if soldiers will left her or some else will take leadership from her."
+    "By the whole time she is haunted by the ghosts of her children, begging her for revenge (son) or help (daughter)."
+    "There will be options to help the ghosts, for example by traditional slavic rituals (dziady), but then she will not be able to fully get involved into rebelion, which will weaken her position and the whole rebelion."
+    "If the player will always choose children, they ghosts will finally leave the world in peace, but the rebelion will fall."
+    "If the player will fully focus on the rebelion, Pężyra will become a queen again. She will be a good ruler, but because of the trauma, she won't marry and have children again, so after her death her clan will go to a chaos again."
+    "If the player will try to balance both rebelion and children, both goals will not be achived."
+
     jump end
 
 label end:

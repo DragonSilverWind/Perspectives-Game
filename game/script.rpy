@@ -102,6 +102,7 @@ label trening:
     "Pężyra walks into the training field just to see how Mieczysław loses sparring match with a young servant and starts to bastes on him."
     menu:
         "Mieczysław! Stop right now!":
+            $ lojalny = true
             "Mieczysław immediately looks ashamed."
             Son "But mother, a prince should not be defeated by a servant..."
             menu:
@@ -115,6 +116,7 @@ label trening:
                     Mother "And you will become a glorious warrior, a protector of feature king."
                     Servant1 "Thank you, my lady. I'll do my best!"
         "Let him do that":
+            $ lojalny = false
             "Pężyra just watches how her son bastes a servant."
     hide Son
     hide Servant1
@@ -171,7 +173,7 @@ label napad:
     "And she can smell smoke."
     "Her room's door opens rapidly."
     show Guardian at right
-    "Pężyra sees one of her husbands soildiers."
+    "Pężyra sees one of her husbands soldiers."
 
     Guardian "My lady! We're under attack! You need to go a safty place!"
 
@@ -209,7 +211,7 @@ label wybor:
         "I will not leave without my children!":
             Guardian "But my lady! This is not safe!"
             Mother "As they are not safe! They need my support!"
-            Guardian "As you wish, my lady. But their rooms are in different part of the palace."
+            Guardian "As you wish, my lady. But their rooms are in different part of the palace. We can't be in two places in the same time.!"
             menu:
                 "We will go for my son. We have to protect our heir.":
                     Guardian "Yes, my lady."
@@ -222,8 +224,9 @@ label wybor:
 label klan:
     scene bg catle wall
     "The castle is engulfed in chaos. The invaders ripped through the walls. They are everywhere."
+    "Fortunately, on the way through the castle's corridors, Pężyra gathers her clans warriors into a one group."
     show Mother at left
-    "Pężyra founds her husband giving orders for his soildiers."
+    "Pężyra founds her husband giving orders for his soldiers."
     hide Guardian
     show Husband 
     Husband "Pężyrko! What are you doing here!? You should get to a shelter!"
@@ -244,7 +247,7 @@ label klan:
             Husband "He has failed us! He has not protected our children!"
             Mother "But he can still save our clan!"
             "Rządziwój lower his sword, uncertain."
-            Mother "We need every soildier. I am sure that he will not fail us again."
+            Mother "We need every soldier. I am sure that he will not fail us again."
             Messenger "I won't! I swear on Perun!"
             "Rządziwój takes away his sword."
             Husband "I will follow my wife's wisdom. You will protect her with your life."
@@ -275,7 +278,7 @@ label klan:
             "The blade of her husbnad sword turned red."
             "Soldiers of the allience, who survived the battle, talked about her fury."
             "Some of them have seen how she killed all allience leaders."
-            "They have seen, when she fell."
+            "They have seen how she fell."
             "But they never felt safe again."
             "They known that the ghost of the mother without children, the wife without children, will hunt them till the end of their days."
             "The alliance's clans are scared of her name till this day."
@@ -285,17 +288,98 @@ label klan:
             jump end
         "The castle is lost. We have to retreat. We need to gather our forces.":
             Guardian "But were will we go?"
-            Mother "We will hide in the caves. We know them better than our enemies. We will not find us there."
+            Mother "We will hide in the caves. We know them better than our enemies. They will not find us there."
             Guardian "Yes, my lady."
             "Pężyra led the retreat. She manages to save some soldiers and servants, but the castle burns to the ground."
             jump rebelia
 
 label syn:
     scene bg castle corridor
+    "The castle is engulfed in chaos. The invaders ripped through the walls. They are everywhere."
+    "On the way through the castle's corridors, Pężyra gathers her clans warriors into a one group. "
+    scene bg training field
+    "Pężyra finally find Mieczysław on the training field, where he and some soldiers try to fight invaders."
+    "Mieczysław warriors were outnumbered, but with Pężyra's warriors' support, the chances are equal."
+    if lojalny:
+        "One of the invaders shoot from a bow to Mieczysław. The young servant shields the prince with his own body."
+        "Other inviders on the training field are killed by Pężyra's soldiers."
+        "But only half a dozen is able to fight. Many were killed or wounded."
+        "The young servant's state is the worst."
+        Mother "Is there any healer?"
+        Guardian "No, my lady."
+        Son "How many of our warriors are still able to fight?"
+        Guardian "Seven, my prince."
+        Mother "We can not stay here. Jagódka may be in danger and our lord..."
+
+        "Pężyra hears Jagódka's scream from her room's window."
+        "If the player has choosen to snuff Jagódka's candle, her scream end quickly. Otherwise, Pężyra sees a fire in Jagódka's room. Her daugher screams stops after a longer time."
+        "In the same time Pężyra hears screams of triumf. The invaders have killed her husband."
+        Guardian "Our lord, what our orders?"
+        Son "Lord... I?... But..."
+        Guardian "Your father has fallen, my lord. Now you are our ruler."
+        Son "I... we... we have to revenge my father!"
+        Guardian "As you wish, my lord."
+        menu:
+            "You will. After you will gather your forces and prepere a plan.":
+                Son "No! I won't run away! I am not a coward!"
+                menu:
+                    "You won't revenge him if you will die to!":
+                        Son "Do you think I am weak, mother?!"
+                        Son "I will prove you're wrong!"
+                        Son "Follow me, those who are still loyal to our clan! We will show our strength!"
+                        "Soldiers follow Mieczysław. All of them dies in the battle."
+                        "Pężyra was captured by the allience forces and executed, as she was the last of her clan."
+                        jump end
+                    "You are not ready for this fight. The enemy outnumbers us. Your soldiers are wounded.":
+                        Son "It is not important! The true warrior do not escape!"
+                        Mother "True warriors protect their clan. Who will protect our villages, if all protectors fall here?"
+                        Son "But..."
+                        Guardian "Your mother is right, my lord."
+                        Son "Then... then we reatret."
+                        Guardian "As you command, my lord."
+                        jump dziedzic
+                    "It is not an escape. Let our enemies think they won. They will be not prepared when you will strike back.":
+                        Son "Yes! My revenge will be legendary! We reatreat!"
+                        jump dziedzic
+            "Your father would be proud of you.":
+                Son "Mother, it is not safe here. You should run away."
+                menu:
+                    "You are right, my son. You will find me, after you will revenge your father.":
+                        "With her guardian help, Pężyra safely escapes from the castle. But her son dies in the battle."
+                        jump ucieczka
+                    "There is no safe place now. I will fight on your side.":
+                        Son "It will be an honour."
+                        "Mieczysław and Pężyra led their soldiers to the battle."
+                        "They fought bravely, but they were outnumbered by the enemy."
+                        "Pężyra and Mieczysław fell with swords in their hands."
+                        "The clan died with them."
+                        jump end
+        jump dziedzic
+    else:
+        "The fight comes to the end, but rappidly Mieczysław is backstabbed by a young servant, the one who trained the previous day with him."
+        "Pężyra's guard quickly kills the traitor, but Mieczysław's wound is deep."
+        "Other inviders on the training field are killed by Pężyra's soldiers."
+        "But only half a dozen is able to fight. Many were killed or wounded."
+        "Mieczysław state is the worst."
+        Mother "Where is a healer!?"
+        Guardian "I know some basics, my lady. But your son needs a quick medical help. He must be taken to a safe place."
+        Mother "But Jagódka and Rądziwoj..."
+        "Pężyra hears Jagódka's scream from her room's window."
+        "If the player has choosen to snuff Jagódka's candle, her scream end quickly. Otherwise, Pężyra sees a fire in Jagódka's room. Her daugher screams stops after a longer time."
+        "In the same time Pężyra hears screams of triumf. The invaders have killed her husband."
+        Guardian "My lady?"
+        Mother "Take us to the secret "
+        "Pężyra decides to retreat survivors and take her son into a safe place."
+
+        jump dziedzic
+
     jump end
 
 label corka:
     scene bg castle corridor
+    "The castle is engulfed in chaos. The invaders ripped through the walls. They are everywhere."
+    "On the way through the castle's corridors, Pężyra gathers her clans warriors into a one group."
+
     jump end
 
 label ucieczka:
@@ -321,7 +405,7 @@ label rebelia:
     "Act III"
     
     "On this path, Pężyra joins a rebelion against the alliance."
-    "Because she is a women, many soldiers and nobels and soldiers don't want to follow her orders."
+    "Because she is a women, many soldiers and nobels don't want to follow her orders."
     "Players choices determinates, if she becomes a leader of the rebelion or if soldiers will left her or some else will take leadership from her."
     "By the whole time she is haunted by the ghosts of her children, begging her for revenge (son) or help (daughter)."
     "There will be options to help the ghosts, for example by traditional slavic rituals (dziady), but then she will not be able to fully get involved into rebelion, which will weaken her position and the whole rebelion."
@@ -329,6 +413,24 @@ label rebelia:
     "If the player will fully focus on the rebelion, Pężyra will become a queen again. She will be a good ruler, but because of the trauma, she won't marry and have children again, so after her death her clan will go to a chaos again."
     "If the player will try to balance both rebelion and children, both goals will not be achived."
 
+    jump end
+
+label dziedzic:
+    scene bg cave
+    "Act III"
+    "On this path, Mieczysław takes a lead over the rebelion against the alliance and aimes to sit on his father's throne."
+    "But Mieczysław is young and most of his decisions are not wise."
+    "The player has to choose if Pężyra lets her son do whatever he wants or if she tries to change his decisions."
+    "By integrating too much Mieczysław will be frustrated of lack of control and he will lose respect of his people."
+    "There will be an options to advice Mieczysław in maniplative way, making him think it was all his idea. He will go to megalomania and loose respect to his mother."
+    "By the whole time Pężyra is haunted by the ghosts of her daughter, calling for help from darkness/fire (candle decision)."
+    "There will be options to help the ghost, for example by traditional slavic rituals (dziady), but then Pężyra will have to leave Mieczysław and rebelion."
+    "Focusing on Jagódka's ghost and/or leaving all the power in Mieczysław hands will lead the rebelion to fall."
+    "Focusing on the rebelion and Mieczysław will lead to sucesfull revenge and Mieczysław will take over the throne, but Pężyra will be always hanted by the ghost and with time she will not be able to help Mieczysław."
+    "Based on player decidions, Mieczysław will totaly ignore advices, won't be able to act without them. It can be balanced."
+
+
+    #"Secret ending option: Mieczysław runs away with the servant. (I have no idea which decision will led to it but my friend told me I had to put it here.)"
     jump end
 
 label end:

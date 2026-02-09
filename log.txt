@@ -1,455 +1,33 @@
-2026-02-09 13:33:42 UTC
+2026-02-09 17:55:31 UTC
 Windows-11-10.0.26100-SP0
 Ren'Py 8.5.2.26010301
 
-Early init took 46 ms
-Loading error handling took 107 ms
-Loading script took 446 ms
-Loading save slot metadata took 318 ms
+Early init took 34 ms
+Loading error handling took 37 ms
+Loading script took 839 ms
+Loading save slot metadata took 32 ms
 Loading persistent took 0 ms
-Running init code took 255 ms
-Loading analysis data took 32 ms
+Running init code took 80 ms
+Loading analysis data took 0 ms
 Analyze and compile ATL took 0 ms
-Reloading save slot metadata took 301 ms
-Backing up script files to 'C:\\Users\\Krysia\\AppData\\Roaming/RenPy/backups\\Perspectives-Game':
-Dump and make backups took 64 ms
+Reloading save slot metadata took 0 ms
+Dump and make backups took 37 ms
 Cleaning cache took 0 ms
 Making clean stores took 0 ms
-Initial gc took 64 ms
+Initial gc took 25 ms
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object took 0 ms
+Creating interface object took 16 ms
 Init translation took 0 ms
 Cleaning stores took 0 ms
-Load screen analysis took 17 ms
-Analyze screens took 14 ms
-Save screen analysis took 16 ms
+Load screen analysis took 16 ms
+Analyze screens took 0 ms
+Save screen analysis took 0 ms
 Save pyanalysis took 0 ms
 Save bytecode took 16 ms
 Running _start took 0 ms
-Interface start took 606 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics'
-Version: '4.6.0 - Build 31.0.101.4502'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1720, 968) drawable=(1720, 968)
-Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/script.rpy", line 105, in script
-    "Mieczysław! Stop right now!":
-  File "renpy/ast.py", line 1187, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/python.py", line 1273, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "game/script.rpy", line 105, in <module>
-    "Mieczysław! Stop right now!":
-NameError: name 'true' is not defined. Did you mean: 'True'?
-
-While running game code:
-  File "game/script.rpy", line 105, in script
-    "Mieczysław! Stop right now!":
-  File "game/script.rpy", line 105, in <module>
-    "Mieczysław! Stop right now!":
-NameError: name 'true' is not defined. Did you mean: 'True'?
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 16 ms
-Loading script took 119 ms
-Loading save slot metadata took 10 ms
-Loading persistent took 0 ms
-Running init code took 23 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 0 ms
-Reloading save slot metadata took 7 ms
-Backing up script files to 'C:\\Users\\Krysia\\AppData\\Roaming/RenPy/backups\\Perspectives-Game':
-Dump and make backups took 32 ms
-Cleaning cache took 0 ms
-Making clean stores took 1 ms
-Initial gc took 38 ms
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 7 ms
-Save screen analysis took 10 ms
-Save pyanalysis took 0 ms
-Save bytecode took 1 ms
-Running _start took 0 ms
-Interface start took 396 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics'
-Version: '4.6.0 - Build 31.0.101.4502'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1720, 968) drawable=(1720, 968)
-Maximum texture size: 4096x4096
-Cleaning stores took 0 ms
-Load screen analysis took 21 ms
-Analyze screens took 0 ms
-Running _start took 1 ms
-Resetting cache.
-Early init took 8 ms
-Loading error handling took 18 ms
-Loading script took 106 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 0 ms
-
-File "game/script.rpy", line 195: end of line expected.
-    Guardian "The lord has told me that you may not trust me. He told me this secret code." *tells secret code*
-                                                                                            ^
-DPI scale factor: 1.250000
-Interface start took 268 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics'
-Version: '4.6.0 - Build 31.0.101.4502'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1720, 968) drawable=(1720, 968)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 8 ms
-Loading error handling took 12 ms
-Loading script took 256 ms
-Loading save slot metadata took 16 ms
-Loading persistent took 1 ms
-Running init code took 82 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 7 ms
-Backing up script files to 'C:\\Users\\Krysia\\AppData\\Roaming/RenPy/backups\\Perspectives-Game':
-Dump and make backups took 39 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 65 ms
-DPI scale factor: 1.250000
-Creating interface object took 0 ms
-Init translation took 1 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 11 ms
-Save screen analysis took 13 ms
-Save pyanalysis took 0 ms
-Save bytecode took 3 ms
-Running _start took 0 ms
-Interface start took 381 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics'
-Version: '4.6.0 - Build 31.0.101.4502'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1720, 968) drawable=(1720, 968)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 9 ms
-Loading error handling took 10 ms
-Loading script took 193 ms
-Loading save slot metadata took 15 ms
-Loading persistent took 0 ms
-Running init code took 28 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 7 ms
-Backing up script files to 'C:\\Users\\Krysia\\AppData\\Roaming/RenPy/backups\\Perspectives-Game':
-Dump and make backups took 45 ms
-Cleaning cache took 0 ms
-Making clean stores took 1 ms
-Initial gc took 80 ms
-DPI scale factor: 1.250000
-Creating interface object took 1 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 14 ms
-Save screen analysis took 25 ms
-Save pyanalysis took 0 ms
-Save bytecode took 1 ms
-Running _start took 1 ms
-Interface start took 302 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics'
-Version: '4.6.0 - Build 31.0.101.4502'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1720, 968) drawable=(1720, 968)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 15 ms
-Loading script took 195 ms
-Loading save slot metadata took 20 ms
-Loading persistent took 0 ms
-Running init code took 28 ms
-Loading analysis data took 5 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 12 ms
-Backing up script files to 'C:\\Users\\Krysia\\AppData\\Roaming/RenPy/backups\\Perspectives-Game':
-Dump and make backups took 39 ms
-Cleaning cache took 1 ms
-Making clean stores took 0 ms
-Initial gc took 88 ms
-DPI scale factor: 1.250000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 8 ms
-Save screen analysis took 10 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 1 ms
-Interface start took 364 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics'
-Version: '4.6.0 - Build 31.0.101.4502'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1720, 968) drawable=(1720, 968)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 7 ms
-Loading error handling took 9 ms
-Loading script took 182 ms
-Loading save slot metadata took 13 ms
-Loading persistent took 0 ms
-Running init code took 36 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 7 ms
-Backing up script files to 'C:\\Users\\Krysia\\AppData\\Roaming/RenPy/backups\\Perspectives-Game':
-Dump and make backups took 33 ms
-Cleaning cache took 0 ms
-Making clean stores took 1 ms
-Initial gc took 59 ms
-DPI scale factor: 1.250000
-Creating interface object took 1 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 10 ms
-Save screen analysis took 16 ms
-Save pyanalysis took 0 ms
-Save bytecode took 1 ms
-Running _start took 1 ms
-Interface start took 360 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics'
-Version: '4.6.0 - Build 31.0.101.4502'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1720, 968) drawable=(1720, 968)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 9 ms
-Loading script took 67 ms
-Loading save slot metadata took 11 ms
-Loading persistent took 0 ms
-Running init code took 23 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 6 ms
-Dump and make backups took 31 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 47 ms
-DPI scale factor: 1.250000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 14 ms
-Analyze screens took 1 ms
-Save screen analysis took 0 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 1 ms
-Interface start took 302 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics'
-Version: '4.6.0 - Build 31.0.101.4502'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1720, 968) drawable=(1720, 968)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 15 ms
-Loading script took 235 ms
-Loading save slot metadata took 28 ms
-Loading persistent took 0 ms
-Running init code took 31 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 0 ms
-Reloading save slot metadata took 7 ms
-Backing up script files to 'C:\\Users\\Krysia\\AppData\\Roaming/RenPy/backups\\Perspectives-Game':
-Dump and make backups took 43 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 83 ms
-DPI scale factor: 1.250000
-Creating interface object took 0 ms
-Init translation took 1 ms
-Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 13 ms
-Save screen analysis took 19 ms
-Save pyanalysis took 1 ms
-Save bytecode took 0 ms
-Running _start took 1 ms
-Interface start took 354 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics'
-Version: '4.6.0 - Build 31.0.101.4502'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1720, 968) drawable=(1720, 968)
-Maximum texture size: 4096x4096
-Cleaning stores took 0 ms
-Load screen analysis took 24 ms
-Analyze screens took 0 ms
-Running _start took 1 ms
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 10 ms
-Loading script took 160 ms
-Loading save slot metadata took 11 ms
-Loading persistent took 1 ms
-Running init code took 24 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 6 ms
-Backing up script files to 'C:\\Users\\Krysia\\AppData\\Roaming/RenPy/backups\\Perspectives-Game':
-Dump and make backups took 33 ms
-Cleaning cache took 0 ms
-Making clean stores took 0 ms
-Initial gc took 55 ms
-DPI scale factor: 1.250000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 8 ms
-Save screen analysis took 10 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 1 ms
-Interface start took 335 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics'
-Version: '4.6.0 - Build 31.0.101.4502'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1720, 968) drawable=(1720, 968)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 9 ms
-Loading error handling took 11 ms
-Loading script took 206 ms
-Loading save slot metadata took 20 ms
-Loading persistent took 0 ms
-Running init code took 41 ms
-Loading analysis data took 5 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 11 ms
-Backing up script files to 'C:\\Users\\Krysia\\AppData\\Roaming/RenPy/backups\\Perspectives-Game':
-Dump and make backups took 36 ms
-Cleaning cache took 0 ms
-Making clean stores took 1 ms
-Initial gc took 70 ms
-DPI scale factor: 1.250000
-Creating interface object took 1 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 14 ms
-Save screen analysis took 17 ms
-Save pyanalysis took 1 ms
-Save bytecode took 0 ms
-Running _start took 2 ms
-Interface start took 373 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) UHD Graphics'
-Version: '4.6.0 - Build 31.0.101.4502'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1720, 968) drawable=(1720, 968)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 10 ms
-Loading error handling took 14 ms
-Loading script took 91 ms
-Loading save slot metadata took 15 ms
-Loading persistent took 0 ms
-Running init code took 41 ms
-Loading analysis data took 3 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 7 ms
-Dump and make backups took 41 ms
-Cleaning cache took 0 ms
-Making clean stores took 1 ms
-Initial gc took 54 ms
-DPI scale factor: 1.250000
-Creating interface object took 0 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 14 ms
-Analyze screens took 2 ms
-Save screen analysis took 0 ms
-Save pyanalysis took 0 ms
-Save bytecode took 0 ms
-Running _start took 0 ms
-Interface start took 395 ms
+Interface start took 533 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -462,6 +40,31 @@ Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 25
 Screen sizes: virtual=(1920, 1080) physical=(1720, 968) drawable=(1720, 968)
 Maximum texture size: 4096x4096
 Cleaning stores took 1 ms
-Load screen analysis took 18 ms
-Analyze screens took 1 ms
+Load screen analysis took 17 ms
+Analyze screens took 0 ms
 Running _start took 2 ms
+
+Full traceback:
+  File "game/script.rpy", line 404, in script
+    if swieca:
+  File "renpy/ast.py", line 2079, in execute
+    if renpy.python.py_eval(condition):
+       ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^ 
+  File "renpy/python.py", line 1305, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1298, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "game/script.rpy", line 404, in <module>
+    if swieca:
+       ^^^^^^ 
+NameError: name 'swieca' is not defined
+
+While running game code:
+  File "game/script.rpy", line 404, in script
+    if swieca:
+  File "game/script.rpy", line 404, in <module>
+    if swieca:
+       ^^^^^^ 
+NameError: name 'swieca' is not defined

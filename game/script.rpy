@@ -133,6 +133,7 @@ label trening:
             Daughter "But mommy..."
             Mother "I will tell you one tomorrow, all right? If you will nicely go to bed now."
             Daughter "Okey...."
+            $ swieca = False
             jump napad
 
 label dobranocka:
@@ -151,10 +152,12 @@ label dobranocka:
     Daughter "I'm not afraid!"
     menu:
         "Okey, I will leave you a candle.":
+            $ swieca = True
             Daughter "Thank you, mommy! I love you!"
             Mother "I love you too, Jagódka. Good night."
             Daughter "Good night, mommy!"
         "So that means that you are brave enough to sleep without a candle.":
+            $ swieca = False
             "Pężyra snuffs the candle."
             Mother "Good night, Jagódka. You are very brave."
             Daughter "Good night."
@@ -390,9 +393,66 @@ label syn:
 label corka:
     scene bg castle corridor
     "The castle is engulfed in chaos. The invaders ripped through the walls. They are everywhere."
+    show Mother at left
     "On the way through the castle's corridors, Pężyra gathers her clans warriors into a one group."
+    "When they reach Jagódka's room, they see three invaders entering into it."
+    "They hear Jagódka's scream."
+    "Pężyra's soldiers rapidly get into the room."
+    scene bg daughters room
+    show Mother at left
+    show Daughter at right
+    if swieca:
+        "The lonely candle, which Pężyra has left to Jagódka, lights the room."
+        "An invader tries to attack Jagódka with his sword. She jumps away." 
+        "But she falls on a table with a candle."
+        "The candle fires toys on the table. Jagódka screams, when her face hits the fire."
+        "Everyone can smell the burned skin."
+    else:
+        "A torch in one of Pężyra's soldier hand lights the room."
+        "They see how an invader attacks Jagódka with a sword."
+        "She tries to jump away."
+        "But she is to slow."
+        "An end of the sword cuts her face."
+    Mother "Jagódka!"
+    hide Daughter
+    "Pężyra runs for Jagódka and gets her out of the room."
+    show Daughter at center
+    "Her soldiers kills the invaders. Jagódka cries."
+    Mother "Is it here any healer?!"
+    show Guardian at right
+    Guardian "No, my lady. We have to take her out of the castle now!"
 
-    jump end
+    show Messenger at right
+    Messenger "My lady! Thank Perun! I was scared that they've hunted you too!"
+    Mother "Me too? What do you mean?"
+    Messenger "I'm sorry, my lady. We fought with our all strengh, but..."
+    Messenger "Your son has fallen."
+    Mother "No!"
+    hide Messenger
+    Daughter "Mommy? What has happend to Mieczysław?"
+    menu:
+        "Don't worry, Jagódka. We will speak about it later.":
+            Daughter "Okey, mommy."
+            "Jagódka tries to not cry."
+        "Your brother has fought the enemies but there were more of them. He is in Nawia now.":
+            Daughter "He left us?"
+            Mother "He did not want to, but he had to."
+    "Pężyra takes Jagódka in her armes."
+    Mother "Shhh, my honey. I am with you."
+    "Jagódka hugs Pężyra."
+    show Guardian at right
+    Guardian "My lady, what are our orders?"
+    Mother "We have to find my hus..."
+    "Pężyra hears screams of triumf. The invaders have killed her husband."
+    Mother "Take us to the secret passage. Quickly!"
+    "Pężyra with her daughter and soldiers escaped, but the castle was burned to the ground."
+    show bg village
+    show Mother
+    show Daughter at left
+    "After the escape, Pężyra and Jagódka found a shelter in one of her clans village."
+
+
+    jump trauma
 
 label ucieczka:
     show bg village
@@ -439,13 +499,30 @@ label dziedzic:
     "By integrating too much Mieczysław will be frustrated of lack of control and he will lose respect of his people."
     "There will be an options to advice Mieczysław in maniplative way, making him think it was all his idea. He will go to megalomania and loose respect to his mother."
     "By the whole time Pężyra is haunted by the ghosts of her daughter, calling for help from darkness/fire (candle decision)."
-    "There will be options to help the ghost, for example by traditional slavic rituals (dziady), but then Pężyra will have to leave Mieczysław and rebelion."
-    "Focusing on Jagódka's ghost and/or leaving all the power in Mieczysław hands will lead the rebelion to fall."
+    "There will be options to help the ghost, for example by traditional slavic rituals (dziady), but then Pężyra will have to leave Mieczysław and the rebelion."
+    "Focusing on Jagódka's ghost she will finally find peace, but leaving the power in Mieczysław hands will lead the rebelion to fall."
     "Focusing on the rebelion and Mieczysław will lead to sucesfull revenge and Mieczysław will take over the throne, but Pężyra will be always hanted by the ghost and with time she will not be able to help Mieczysław."
     "Based on player decidions, Mieczysław will totaly ignore advices, won't be able to act without them. It can be balanced."
 
 
     #"Secret ending option: Mieczysław runs away with the servant. (I have no idea which decision will led to it but my friend told me I had to put it here.)"
+    jump end
+
+label trauma:
+    #show bg village
+    #show Mother
+    #show Daughter at left
+    "On this path, Pężyra is asked to led the rebelion against the alliance."
+    "The player can agree or refuse and focus on Jagódka."
+    "She has to deal with big trauma after the attack. The trigger is darkness or fire (depending on the candle choice)."
+    "By the whole time Pężyra is haunted by the ghost of her son, demanding for a revenge."
+    "There will be options to help the ghost, for example by traditional slavic rituals (dziady), but then Pężyra will have to ignore Jagódka's needs and the rebelion."
+    "Even with the player will choose to focus on the rebelion, her lidership will be challenged all time, because she is a women."
+    "If the player will focus on rebelion, it will succed. Pężyra will become a queen and Jagódka after her. Because of her trauma, Jagódka will not be a good ruler and the clan will come to chaos."
+    "If the player will focus on Jagódka, she will finally recover from a trauma, but Pężyra will be haunted by her son ghost and never find peace."
+    "Focusing on Mieczysław's ghost will let him finally find peace in the afterlife, but Jagódka will never recover from trauma and the rebelion will fall."
+
+
     jump end
 
 label end:

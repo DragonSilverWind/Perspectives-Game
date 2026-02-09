@@ -16,7 +16,7 @@ label start:
 
     "Act I"
     
-    "This part will entroduce the player the characters, their relationships and lore."
+    "This part will entroduce the characters, their relationships and lore."
     "It will show signs of comming catastrophe, but there are no way to prevent it, just to preper for it."
 
     jump czy_narada
@@ -40,7 +40,7 @@ label czy_narada:
 
     hide Advicers
 
-    Husband "Honey, not now. A messenger has delivered us very worring news from the border. We need to talk about it imidietly."
+    Husband "Pężyrko, not now. A messenger has delivered us very worring news from the border. We need to talk about it imidietly."
 
     menu:
         "I am sorry, my husband. I have not intended to interrupt you.":
@@ -257,6 +257,7 @@ label klan:
             Husband "I will follow my wife's wisdom. You will protect her with your life."
             Messenger "I will, my lord!"
         "He deserves death.":
+            hide Messenger
             "Rządziwój cuts off messengers head."
             Husband "One traitor less."
     hide Messenger
@@ -322,7 +323,7 @@ label syn:
 
         "Pężyra hears Jagódka's scream from her room's window."
         "If the player has choosen to snuff Jagódka's candle, her scream end quickly. Otherwise, Pężyra sees a fire in Jagódka's room. Her daugher screams stops after a longer time."
-        "In the same time Pężyra hears screams of triumf. The invaders have killed her husband."
+        "In the same time everybody hears screams of triumf. The invaders have killed her husband."
         Guardian "Our lord, what our orders?"
         Son "Lord... I?... But..."
         Guardian "Your father has fallen, my lord. Now you are our ruler."
@@ -437,13 +438,14 @@ label corka:
         "Your brother has fought the enemies but there were more of them. He is in Nawia now.":
             Daughter "He left us?"
             Mother "He did not want to, but he had to."
+            "Jagódka starts to cry."
     "Pężyra takes Jagódka in her armes."
     Mother "Shhh, my honey. I am with you."
     "Jagódka hugs Pężyra."
     show Guardian at right
     Guardian "My lady, what are our orders?"
     Mother "We have to find my hus..."
-    "Pężyra hears screams of triumf. The invaders have killed her husband."
+    "They hear screams of triumf. The invaders have killed her husband."
     Mother "Take us to the secret passage. Quickly!"
     "Pężyra with her daughter and soldiers escaped, but the castle was burned to the ground."
     show bg village
@@ -476,7 +478,7 @@ label rebelia:
     "Act III"
     
     show Mother 
-    "On this path, Pężyra joins a rebelion against the alliance."
+    "On this path, Pężyra leads a rebelion against the alliance."
     "Because she is a women, many soldiers and nobels don't want to follow her orders."
     "Players choices determinates, if she becomes a leader of the rebelion or if soldiers will left her or some else will take leadership from her."
     "By the whole time she is haunted by the ghosts of her children, begging her for revenge (son) or help (daughter)."
@@ -501,7 +503,7 @@ label dziedzic:
     "By the whole time Pężyra is haunted by the ghosts of her daughter, calling for help from darkness/fire (candle decision)."
     "There will be options to help the ghost, for example by traditional slavic rituals (dziady), but then Pężyra will have to leave Mieczysław and the rebelion."
     "Focusing on Jagódka's ghost she will finally find peace, but leaving the power in Mieczysław hands will lead the rebelion to fall."
-    "Focusing on the rebelion and Mieczysław will lead to sucesfull revenge and Mieczysław will take over the throne, but Pężyra will be always hanted by the ghost and with time she will not be able to help Mieczysław."
+    "Focusing on the rebelion and Mieczysław will lead to sucesfull revenge and Mieczysław will take over the throne, but Pężyra will be always haunted by the ghost and with time she will not be able to help Mieczysław."
     "Based on player decidions, Mieczysław will totaly ignore advices, won't be able to act without them. It can be balanced."
 
 
@@ -514,7 +516,7 @@ label trauma:
     #show Daughter at left
     "On this path, Pężyra is asked to led the rebelion against the alliance."
     "The player can agree or refuse and focus on Jagódka."
-    "She has to deal with big trauma after the attack. The trigger is darkness or fire (depending on the candle choice)."
+    "Jagódka has to deal with big trauma after the attack. The trigger is darkness or fire (depending on the candle choice)."
     "By the whole time Pężyra is haunted by the ghost of her son, demanding for a revenge."
     "There will be options to help the ghost, for example by traditional slavic rituals (dziady), but then Pężyra will have to ignore Jagódka's needs and the rebelion."
     "Even with the player will choose to focus on the rebelion, her lidership will be challenged all time, because she is a women."

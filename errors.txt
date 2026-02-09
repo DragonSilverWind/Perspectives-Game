@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 71: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "Let me join you:"
-                      ^
+File "game/script.rpy", line 195: end of line expected.
+    Guardian "The lord has told me that you may not trust me. He told me this secret code." *tells secret code*
+                                                                                            ^
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Sun Feb  1 17:32:16 2026
+Mon Feb  9 14:45:34 2026

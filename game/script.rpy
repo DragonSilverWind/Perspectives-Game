@@ -87,11 +87,12 @@ label narada:
     Advicers "Yes, my lord."
 
     Advicers "*one of them gives a report of worring news*"
-    "The news shows that other clans/kingdomes continue to create an alliance against Husband and gather forces."
+    "The news shows that other clans/kingdomes continue to create an alliance against Rządziwoj's clan and gather forces."
     "Rądziwoj and his advicors discuss about the threat and ways to replay on it."
     "There will be some dialogue options for Pężyra to join the discussions, but all her attempts will be ignored or criticalized as *women know nothing about politics*."
     hide Husband
     hide Advicers
+    "After the deiberation, Pężyra decided to chceck how her son handles with a sword training."
 
 label trening:
     show bg training field
@@ -102,7 +103,7 @@ label trening:
     "Pężyra walks into the training field just to see how Mieczysław loses sparring match with a young servant and starts to bastes on him."
     menu:
         "Mieczysław! Stop right now!":
-            $ lojalny = true
+            $ lojalny = True
             "Mieczysław immediately looks ashamed."
             Son "But mother, a prince should not be defeated by a servant..."
             menu:
@@ -116,7 +117,7 @@ label trening:
                     Mother "And you will become a glorious warrior, a protector of feature king."
                     Servant1 "Thank you, my lady. I'll do my best!"
         "Let him do that":
-            $ lojalny = false
+            $ lojalny = False
             "Pężyra just watches how her son bastes a servant."
     hide Son
     hide Servant1
@@ -191,7 +192,7 @@ label informacje:
             Guardian "The alliance against your husband, my lady. All of them."
             jump informacje
         "How can I trust you? You may be one of the invaders.":
-            Guardian "The lord has told me that you may not trust me. He told me this message."
+            Guardian "The lord has told me that you may not trust me. He told me this secret code. *tells secret code*" 
             jump informacje        
         "Where is my husband?":
             Guardian "He leads the defence on the walls."
@@ -296,9 +297,14 @@ label klan:
 label syn:
     scene bg castle corridor
     "The castle is engulfed in chaos. The invaders ripped through the walls. They are everywhere."
+    show Mother at left
+    show Guardian at right
     "On the way through the castle's corridors, Pężyra gathers her clans warriors into a one group. "
     scene bg training field
+    show Mother at left
+    show Guardian at right
     "Pężyra finally find Mieczysław on the training field, where he and some soldiers try to fight invaders."
+    show Son 
     "Mieczysław warriors were outnumbered, but with Pężyra's warriors' support, the chances are equal."
     if lojalny:
         "One of the invaders shoot from a bow to Mieczysław. The young servant shields the prince with his own body."
@@ -327,6 +333,8 @@ label syn:
                         Son "Do you think I am weak, mother?!"
                         Son "I will prove you're wrong!"
                         Son "Follow me, those who are still loyal to our clan! We will show our strength!"
+                        hide Son
+                        hide Guardian
                         "Soldiers follow Mieczysław. All of them dies in the battle."
                         "Pężyra was captured by the allience forces and executed, as she was the last of her clan."
                         jump end
@@ -340,12 +348,15 @@ label syn:
                         jump dziedzic
                     "It is not an escape. Let our enemies think they won. They will be not prepared when you will strike back.":
                         Son "Yes! My revenge will be legendary! We reatreat!"
+                        "Pężyra, Mieczysław and their soldiers safely escapes through the secret passage. The invaders have burned the castle to the ground."
                         jump dziedzic
             "Your father would be proud of you.":
                 Son "Mother, it is not safe here. You should run away."
                 menu:
                     "You are right, my son. You will find me, after you will revenge your father.":
                         "With her guardian help, Pężyra safely escapes from the castle. But her son dies in the battle."
+                        hide Son
+                        hide Guardian
                         jump ucieczka
                     "There is no safe place now. I will fight on your side.":
                         Son "It will be an honour."
@@ -357,8 +368,9 @@ label syn:
         jump dziedzic
     else:
         "The fight comes to the end, but rappidly Mieczysław is backstabbed by a young servant, the one who trained the previous day with him."
+        hide Son
         "Pężyra's guard quickly kills the traitor, but Mieczysław's wound is deep."
-        "Other inviders on the training field are killed by Pężyra's soldiers."
+        "Other invaders on the training field are killed by Pężyra's soldiers."
         "But only half a dozen is able to fight. Many were killed or wounded."
         "Mieczysław state is the worst."
         Mother "Where is a healer!?"
@@ -384,8 +396,7 @@ label corka:
 
 label ucieczka:
     show bg village
-    hide Guardian
-    hide Mother
+    show Mother
     "After her escape, Pężyra found a shelter in one of her clans village."
     "Every night she was haunted by ghosts of her children."
     "Sometimes Pężyra thought she can hear their screams or see their shadows even during the day."
@@ -404,6 +415,7 @@ label rebelia:
     scene bg cave
     "Act III"
     
+    show Mother 
     "On this path, Pężyra joins a rebelion against the alliance."
     "Because she is a women, many soldiers and nobels don't want to follow her orders."
     "Players choices determinates, if she becomes a leader of the rebelion or if soldiers will left her or some else will take leadership from her."
@@ -418,6 +430,9 @@ label rebelia:
 label dziedzic:
     scene bg cave
     "Act III"
+
+    show Mother at left
+    show Son at right
     "On this path, Mieczysław takes a lead over the rebelion against the alliance and aimes to sit on his father's throne."
     "But Mieczysław is young and most of his decisions are not wise."
     "The player has to choose if Pężyra lets her son do whatever he wants or if she tries to change his decisions."

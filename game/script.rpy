@@ -70,8 +70,6 @@ label czy_narada:
             jump narada
 
 
-    jump end
-
 label narada:
     show Advicers at right
     show Husband
@@ -207,7 +205,7 @@ label wybor:
         "After you.":
             "Pężyra safely escapes from the castle, but her familly dies in the attack. Smoke over the burned castle was seen through many days."
             jump ucieczka
-        "I can not leave my husband in the darkest hour!":
+        "I can not leave my husband and my clan in the darkest hour!":
             Guardian "But my lady! This is not safe! And he will be distructed if he'll have to protect you as well!"
             Mother "He knows I can care for myself. My presense on the walls will motivate our soldiers."
             Guardian "As you wish."
@@ -223,7 +221,6 @@ label wybor:
                 "We will go for my daughter. She must be very scared.":
                     Guardian "Yes, my lady."
                     jump corka
-    jump end
 
 label klan:
     scene bg catle wall
@@ -389,8 +386,6 @@ label syn:
 
         jump dziedzic
 
-    jump end
-
 label corka:
     scene bg castle corridor
     "The castle is engulfed in chaos. The invaders ripped through the walls. They are everywhere."
@@ -478,14 +473,14 @@ label rebelia:
     "Act III"
     
     show Mother 
-    "On this path, Pężyra leads a rebelion against the alliance."
+    "On this path, Pężyra leads a uprising against the alliance."
     "Because she is a women, many soldiers and nobels don't want to follow her orders."
-    "Players choices determinates, if she becomes a leader of the rebelion or if soldiers will left her or some else will take leadership from her."
+    "Players choices determinates, if she becomes a leader of the uprising or if soldiers will left her or some else will take leadership from her."
     "By the whole time she is haunted by the ghosts of her children, begging her for revenge (son) or help (daughter)."
-    "There will be options to help the ghosts, for example by traditional slavic rituals (dziady), but then she will not be able to fully get involved into rebelion, which will weaken her position and the whole rebelion."
-    "If the player will always choose children, they ghosts will finally leave the world in peace, but the rebelion will fall."
-    "If the player will fully focus on the rebelion, Pężyra will become a queen again. She will be a good ruler, but because of the trauma, she won't marry and have children again, so after her death her clan will go to a chaos again."
-    "If the player will try to balance both rebelion and children, both goals will not be achived."
+    "There will be options to help the ghosts, for example by traditional slavic rituals (dziady), but then she will not be able to fully get involved into uprising, which will weaken her position and the whole uprising."
+    "If the player will always choose children, they ghosts will finally leave the world in peace, but the uprising will fall."
+    "If the player will fully focus on the uprising, Pężyra will become a queen again. She will be a good ruler, but because of the trauma, she won't marry and have children again, so after her death her clan will go to a chaos again."
+    "If the player will try to balance both uprising and children, both goals will not be achived."
 
     jump end
 
@@ -495,15 +490,15 @@ label dziedzic:
 
     show Mother at left
     show Son at right
-    "On this path, Mieczysław takes a lead over the rebelion against the alliance and aimes to sit on his father's throne."
+    "On this path, Mieczysław takes a lead over the uprising against the alliance and aimes to sit on his father's throne."
     "But Mieczysław is young and most of his decisions are not wise."
     "The player has to choose if Pężyra lets her son do whatever he wants or if she tries to change his decisions."
     "By integrating too much Mieczysław will be frustrated of lack of control and he will lose respect of his people."
     "There will be an options to advice Mieczysław in maniplative way, making him think it was all his idea. He will go to megalomania and loose respect to his mother."
     "By the whole time Pężyra is haunted by the ghosts of her daughter, calling for help from darkness/fire (candle decision)."
-    "There will be options to help the ghost, for example by traditional slavic rituals (dziady), but then Pężyra will have to leave Mieczysław and the rebelion."
-    "Focusing on Jagódka's ghost she will finally find peace, but leaving the power in Mieczysław hands will lead the rebelion to fall."
-    "Focusing on the rebelion and Mieczysław will lead to sucesfull revenge and Mieczysław will take over the throne, but Pężyra will be always haunted by the ghost and with time she will not be able to help Mieczysław."
+    "There will be options to help the ghost, for example by traditional slavic rituals (dziady), but then Pężyra will have to leave Mieczysław and the uprising."
+    "Focusing on Jagódka's ghost she will finally find peace, but leaving the power in Mieczysław hands will lead the uprising to fall."
+    "Focusing on the uprising and Mieczysław will lead to sucesfull revenge and Mieczysław will take over the throne, but Pężyra will be always haunted by the ghost and with time she will not be able to help Mieczysław."
     "Based on player decidions, Mieczysław will totaly ignore advices, won't be able to act without them. It can be balanced."
 
 
@@ -514,15 +509,15 @@ label trauma:
     #show bg village
     #show Mother
     #show Daughter at left
-    "On this path, Pężyra is asked to led the rebelion against the alliance."
+    "On this path, Pężyra is asked to led the uprising against the alliance."
     "The player can agree or refuse and focus on Jagódka."
     "Jagódka has to deal with big trauma after the attack. The trigger is darkness or fire (depending on the candle choice)."
     "By the whole time Pężyra is haunted by the ghost of her son, demanding for a revenge."
-    "There will be options to help the ghost, for example by traditional slavic rituals (dziady), but then Pężyra will have to ignore Jagódka's needs and the rebelion."
-    "Even with the player will choose to focus on the rebelion, her lidership will be challenged all time, because she is a women."
-    "If the player will focus on rebelion, it will succed. Pężyra will become a queen and Jagódka after her. Because of her trauma, Jagódka will not be a good ruler and the clan will come to chaos."
+    "There will be options to help the ghost, for example by traditional slavic rituals (dziady), but then Pężyra will have to ignore Jagódka's needs and the uprising."
+    "Even with the player will choose to focus on the uprising, her lidership will be challenged all time, because she is a women."
+    "If the player will focus on uprising, it will succed. Pężyra will become a queen and Jagódka after her. Because of her trauma, Jagódka will not be a good ruler and the clan will come to chaos."
     "If the player will focus on Jagódka, she will finally recover from a trauma, but Pężyra will be haunted by her son ghost and never find peace."
-    "Focusing on Mieczysław's ghost will let him finally find peace in the afterlife, but Jagódka will never recover from trauma and the rebelion will fall."
+    "Focusing on Mieczysław's ghost will let him finally find peace in the afterlife, but Jagódka will never recover from trauma and the uprising will fall."
 
 
     jump end

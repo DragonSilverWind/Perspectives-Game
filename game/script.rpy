@@ -252,14 +252,44 @@ label klan:
             Messenger "I won't! I swear on Perun!"
             "Rządziwój takes away his sword."
             Husband "I will follow my wife's wisdom. You will protect her with your life."
-            Messenger "I will, my lord!"
+            Messenger "I will, my lord! Thank you, my lady!"
         "He deserves death.":
             hide Messenger
             "Rządziwój cuts off messengers head."
             Husband "One traitor less."
     hide Messenger
-    Husband "We lost our children. But there will be the time for grief after the battle. We can not lost our clan."
-    Mother "I will fight on your site, my husband. We will avange our lost."
+    show Guardian at right
+    Guardian "What are our orders, my lord?"
+    Husband "Gather our warriors! We will avenge my children! Prepear for the counter attack!"
+    menu:
+        "May Perun guide your arm, my husband.":
+            Husband "You can not stay here, Pężyrko. There is a secret passage out of the castle. It leads to a village. You will be safe there."
+            Mother "As you wish, my husband. I will pray to Perun for your victory."
+            "Pężyra safely escapes from the castle. But Rządiwoj and his warriors die in the battle."
+            jump ucieczka
+        "My husband, we know our castle much better than our enemies. Let's use this knowledge.":
+            Husband "What do you have in mind?"
+            Mother "Our castle is full of hideouts. Let's use them and set traps for our enemies. We will take them warrior by warrior, group by group. We will reduce their number and defend the attack."
+            Husband "That is... a wise plan. It may bring us victory."
+            Mother "We have no time to lose."
+            Husband "You should not stay here. It is not safe."
+            Mother "There are no safe place left. I will stay with you. I know you will protect me."
+            "Rządziwój with Pężyra led his warriors to the battle. It was long and exhausting, but the tide slowly changed against the invadors."
+            "Finally, after the whole night of fights, the alliance's leaders decided to retreat."
+            "The castle was protected... but with the high cost."
+            "Many soldiers has died or wounded. A big part of the castle was destroyed in the battle."
+            "Healers came from villages to take care of the wounded warriors, but for some of them it was to late."
+            "One of them was Rządziwoj."
+            "In his last words, he asked Pężyra to take care of their clan."
+            jump odbudowa
+            
+
+    # Husband "We lost our children. But there will be the time for grief after the battle. We can not lost our clan."
+    # Mother "I will fight on your site, my husband. We will avange our lost."
+    jump odbudowa
+
+
+    """
     "A lonely arrow rips Rządziwoj's flank."
     Mother "Rządziwój!"
     Husband "*cough* Pężyrko... listen to me... I won't survive it..."
@@ -294,6 +324,7 @@ label klan:
             Guardian "Yes, my lady."
             "Pężyra led the retreat. She manages to save some soldiers and servants, but the castle burns to the ground."
             jump rebelia
+    """
 
 label syn:
     scene bg castle corridor
@@ -468,19 +499,19 @@ label ucieczka:
 
 ####### Akt III #######
 
-label rebelia:
-    scene bg cave
+label odbudowa:
+    scene bg castle
     "Act III"
     
     show Mother 
-    "On this path, Pężyra leads a uprising against the alliance."
+    "On this path, Pężyra takes a leadership over the clan after the devastating attack of the alliance. She has to rebuild the castle and clan's political position."
     "Because she is a women, many soldiers and nobels don't want to follow her orders."
-    "Players choices determinates, if she becomes a leader of the uprising or if soldiers will left her or some else will take leadership from her."
+    "Players choices determinates, if she will gain her people respect or if soldiers will left her or some else will take leadership from her."
     "By the whole time she is haunted by the ghosts of her children, begging her for revenge (son) or help (daughter)."
-    "There will be options to help the ghosts, for example by traditional slavic rituals (dziady), but then she will not be able to fully get involved into uprising, which will weaken her position and the whole uprising."
-    "If the player will always choose children, they ghosts will finally leave the world in peace, but the uprising will fall."
-    "If the player will fully focus on the uprising, Pężyra will become a queen again. She will be a good ruler, but because of the trauma, she won't marry and have children again, so after her death her clan will go to a chaos again."
-    "If the player will try to balance both uprising and children, both goals will not be achived."
+    "There will be options to help the ghosts, for example by traditional slavic rituals (dziady), but then she will not be able to fully get involved into rebuild of the clan and the castle, which will weaken her position and the weaken the whole clan."
+    "If the player will always choose children, they ghosts will finally leave the world in peace, but the clan will engulfed in chaos, not prepeared for next attacks.."
+    "If the player will fully focus on the clan, Pężyra will become a respected queen. She will be a good ruler, but because of the trauma, she won't marry and have children again, so after her death her clan will go to a chaos again."
+    "If the player will try to balance both clan and children, both goals will not be achived."
 
     jump end
 

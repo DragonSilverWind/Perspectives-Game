@@ -30,9 +30,9 @@ label czy_narada:
     show Mother at left 
     show Advicers at right 
 
-    Advicers "*discussing something about the incoming deliberation*"
+    Advicers "*discussing something about the incoming council*"
 
-    "That's weird. Normally the deliberations starts after a dinner."
+    "That's weird. Normally the counicils start much later."
 
     show Husband
 
@@ -63,7 +63,7 @@ label czy_narada:
                     Husband "You are right. He should be prepeard for all the dangers and his mother shoud not be blind on them to guid him."
                     jump narada
 
-        "Then, I will join you at the deliberation.":
+        "Then I will join you at the council.":
             Husband "It is not a place for a women."
             Mother "I should now about everything that may threaten our son and your heir."
             Husband "You are right. He should be prepeard for all the dangers and his mother shoud not be blind on them to guid him."
@@ -74,9 +74,9 @@ label narada:
     show Advicers at right
     show Husband
     show Mother at left
-    show bg deliberation room
+    show bg council room
 
-    "Pężyra and Rądziwoj enter deliberation room. The advicers already wait. They look at Pężyra."
+    "Pężyra and Rądziwoj enter council room. The advicers already wait. They look at Pężyra."
 
     Husband "Let's begin!"
     Advicers "My lord, should we wait till..."
@@ -85,7 +85,7 @@ label narada:
     Advicers "Yes, my lord."
 
     Advicers "*one of them gives a report of worring news*"
-    "The news shows that other clans/kingdomes continue to create an alliance against Rządziwoj's clan and gather forces."
+    "The news shows that other clans continue to create an alliance against Rządziwoj's clan and gather forces."
     "Rądziwoj and his advicors discuss about the threat and ways to replay on it."
     "There will be some dialogue options for Pężyra to join the discussions, but all her attempts will be ignored or criticalized as *women know nothing about politics*."
     hide Husband
@@ -277,7 +277,7 @@ label klan:
             "Rządziwój with Pężyra led his warriors to the battle. It was long and exhausting, but the tide slowly changed against the invadors."
             "Finally, after the whole night of fights, the alliance's leaders decided to retreat."
             "The castle was protected... but with the high cost."
-            "Many soldiers has died or wounded. A big part of the castle was destroyed in the battle."
+            "Many soldiers have died or wounded. A big part of the castle was destroyed in the battle."
             "Healers came from villages to take care of the wounded warriors, but for some of them it was to late."
             "One of them was Rządziwoj."
             "In his last words, he asked Pężyra to take care of their clan."
@@ -509,7 +509,7 @@ label odbudowa:
     "Players choices determinates, if she will gain her people respect or if soldiers will left her or some else will take leadership from her."
     "By the whole time she is haunted by the ghosts of her children, begging her for revenge (son) or help (daughter)."
     "There will be options to help the ghosts, for example by traditional slavic rituals (dziady), but then she will not be able to fully get involved into rebuild of the clan and the castle, which will weaken her position and the weaken the whole clan."
-    "If the player will always choose children, they ghosts will finally leave the world in peace, but the clan will engulfed in chaos, not prepeared for next attacks.."
+    "If the player will always choose children, they ghosts will finally leave the world in peace, but the clan will engulfed in chaos, not prepeared for next attacks."
     "If the player will fully focus on the clan, Pężyra will become a respected queen. She will be a good ruler, but because of the trauma, she won't marry and have children again, so after her death her clan will go to a chaos again."
     "If the player will try to balance both clan and children, both goals will not be achived."
 
